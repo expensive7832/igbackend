@@ -1,24 +1,12 @@
-from django.http import HttpResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
+@api_view(['GET'])
 def Signup(req):
-    return HttpResponse("i guess you want to signup")
+    return Response(data="i want to signup")
 
 
-def Login(req):
-    return HttpResponse("i guess you want to login")
 
-def Update(req):
-    return HttpResponse("i guess you want to update")
-
-
-def Delete(req):
-    return HttpResponse("i guess you want to delete")
-
-def getUser(req):
-    return HttpResponse("here is particular info about user")
-
-def getAllUser(req):
-    return HttpResponse("All user info")
 
 
 
